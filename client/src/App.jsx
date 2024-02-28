@@ -7,6 +7,7 @@ import Signin from './pages/Signin'
 import Products from './pages/Products'
 import Dashboard from './pages/Dashboard'
 import Header from './components/Header'
+import FooterCom from './components/FooterCom'
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
       <Route path="/products" element ={<Products/>}/>
       <Route path="/dashboard" element ={<Dashboard/>}/>
     </Routes>
+    <FooterCom/>
     </BrowserRouter>
     
   )
