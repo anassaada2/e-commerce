@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
 signinInFailure , signinInSuccess , signinStart
 } from '../redux/user/userSlice';
+import OAuth from '../components/OAuth';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({});
@@ -46,9 +47,9 @@ export default function SignIn() {
         <div className='flex-1'>
           <Link to='/' className='font-bold dark:text-white text-4xl'>
             <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
-              Sahand's
+              Anas's
             </span>
-            Blog
+            Shop
           </Link>
           <p className='text-sm mt-5'>
             This is a demo project. You can sign in with your email and password
@@ -91,11 +92,11 @@ export default function SignIn() {
                 'Sign In'
               )}
             </Button>
-        
+        <OAuth/>
           </form>
           <div className='flex gap-2 text-sm mt-5'>
             <span>Dont Have an account?</span>
-            <Link to='/sign-up' className='text-blue-500'>
+            <Link to='/signup' className='text-blue-500'>
               Sign Up
             </Link>
           </div>
