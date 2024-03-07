@@ -8,6 +8,7 @@ import Products from './pages/Products'
 import Dashboard from './pages/Dashboard'
 import Header from './components/Header'
 import FooterCom from './components/FooterCom'
+import PrivteRoute from './components/PrivteRoute'
 
 
 export default function App() {
@@ -21,7 +22,10 @@ export default function App() {
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/signin" element ={<Signin/>}/>
       <Route path="/products" element ={<Products/>}/>
-      <Route path="/dashboard" element ={<Dashboard/>}/>
+      <Route element={<PrivteRoute/>}>
+        <Route path="/dashboard" element ={<Dashboard/>}/>
+      </Route>
+      
     </Routes>
     <FooterCom/>
     </BrowserRouter>
