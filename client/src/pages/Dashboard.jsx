@@ -19,7 +19,7 @@ if(tabFromUrl){
         {/*sidbar */}
         <DashSidebar/>
            </div>
-      <div className='mx-auto'>
+      <div className=' w-full '>
         {/* right side */}
         {tab === 'profile' && <DashProfile/>}
       </div>
