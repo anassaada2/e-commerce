@@ -57,3 +57,11 @@ return next(errorHandler(403,'you are not allowed to delete this user'))
     }
 
 }
+export const signout = async (req,res,next)=>{
+    try {
+        res.clearCookie('access_token').status(200).json('user has been signet out')
+    } catch (error) {
+        next(error)
+    }
+
+}
