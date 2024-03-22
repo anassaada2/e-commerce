@@ -9,7 +9,8 @@ import Dashboard from './pages/Dashboard'
 import Header from './components/Header'
 import FooterCom from './components/FooterCom'
 import PrivteRoute from './components/PrivteRoute'
-
+import CreateProduct from './pages/CreateProduct'
+import  OnlyAdminPrivteRoute from './components/OnlyAdminPrivteRoute'
 
 export default function App() {
   
@@ -25,7 +26,9 @@ export default function App() {
       <Route element={<PrivteRoute/>}>
         <Route path="/dashboard" element ={<Dashboard/>}/>
       </Route>
-      
+      <Route element={<OnlyAdminPrivteRoute/>}>
+        <Route path="/createProduct" element ={<CreateProduct/>}/>
+      </Route>
     </Routes>
     <FooterCom/>
     </BrowserRouter>
